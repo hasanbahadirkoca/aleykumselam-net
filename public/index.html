@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Ve Aleyküm Selam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ve Aleyküm Selam. وَعَلَيْكُمُ ٱلسَّلَامُ. Allah'ın selamını ulaştırmanın elektronik versiyonu."
+    />
     <style>
       @font-face {
         font-family: "Amiri";
@@ -24,6 +29,8 @@
         color: #fff;
         margin: 0;
         text-align: center;
+
+        animation: fadeinBG 1.5s;
       }
       .main {
         position: absolute;
@@ -55,8 +62,18 @@
       }
 
       p1 a {
-        color: #fff;
+        color: #000;
         text-decoration: none;
+      }
+
+      @keyframes fadeinBG {
+        from {
+          background: #fff;
+        }
+
+        to {
+          background: #000;
+        }
       }
 
       @keyframes fadein {
@@ -78,6 +95,7 @@
           opacity: 0;
         }
       }
+
     </style>
   </head>
   <body>
@@ -92,7 +110,7 @@
       // Hide the main div
       document.querySelector(".main").style.display = "none";
       // Redirect the page to the SelamunAleykum.net
-      window.location.href = "https://selamunaleykum.net";
+      //window.location.href = "https://selamunaleykum.net";
     }, 3000);
 
     // Every 200ms, cursor style will be changed to "none" and "auto"
@@ -100,7 +118,8 @@
       document.body.style.cursor = "none";
       setTimeout(function () {
         // Change the cursor with /images/Allah-100px.png
-        document.body.style.cursor = "url('/images/Allah-White-100px.png'), auto";
+        document.body.style.cursor =
+          "url('/images/Allah-White-100px.png'), auto";
       }, 500);
     }, 1000);
   </script>
